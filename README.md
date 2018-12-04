@@ -7,7 +7,7 @@ Nodejs literal templating for node native require module.
 
 Add namespace to be replaced from `package.json`
 
-`
+```json
 {
   "name": "literal-require",
   "version": "1.0.0",
@@ -33,7 +33,7 @@ Add namespace to be replaced from `package.json`
   }
   </b>
 }
-`
+```
 
 Then use your require as follows
 
