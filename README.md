@@ -11,7 +11,7 @@ Add namespace to your application `package.json`
 ```json
 {
   ...
-  
+
   -> "namespace": {
     "@application": "${ process.cwd() }/application"
   }
@@ -24,6 +24,6 @@ Then use in your require's as follows
 
 `require('@application/example-module')`
 
-## require('path').literal('@application')
+### require('path').literal('@application')
 
 Will resolve the path with pre-evaluated literal key/value.
