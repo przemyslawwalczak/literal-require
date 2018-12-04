@@ -3,6 +3,7 @@ Nodejs literal templating for node native require module.
 # Usage
 
 `npm i literal-require --save`
+
 `require('literal-require')`
 
 Add namespace to be replaced from `package.json`
@@ -27,11 +28,10 @@ Add namespace to be replaced from `package.json`
   },
   "homepage": "https://github.com/przemyslawwalczak/literal-require#readme",
 
-  <b>
-  "namespace": {
+  
+  -> "namespace": {
     "@application": "${ process.cwd() }/application"
   }
-  </b>
 }
 ```
 
