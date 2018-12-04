@@ -1,10 +1,11 @@
 Nodejs literal templating for node native require module.
 
-## Usage
+### Usage
 
 `npm i literal-require --save`
 
 `require('literal-require')`
+
 
 Add namespace to your application `package.json`
 
@@ -18,11 +19,13 @@ Add namespace to your application `package.json`
 }
 ```
 
-Then use in your require's as follows
+
+### Then use in your require's as follows
 
 `require('@application/config.json')`
 
 `require('@application/example-module')`
+
 
 ### require('path').literal('@application')
 
