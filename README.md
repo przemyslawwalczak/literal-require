@@ -34,3 +34,7 @@ require('literal-require')
 ### require('path').literal('@application')
 
 #### Will resolve the path with pre-evaluated literal key/value.
+
+### require('literal-require).add(namespace, path)
+
+#### Adds namespace to be used later with require or path.literal
