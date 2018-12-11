@@ -6,15 +6,18 @@ const namespace = package.namespace || {}
 
 const literals = []
 
-for (let name in namespace) {
-  let value = namespace[name]
-
+const eval_literal = (value) => {
   let literal
   while (literal = value.match(/\$\{\s*([^\s\}]+)\s*\}/)) {
     let [l, command] = literal
     value = value.replace(l, eval(command))
   }
 
+  return value
+}
+
+for (let name in namespace) {
+  let value = eval_literal(namespace[name])
   namespace[name] = Path.resolve(value)
   literals.push(escape(name))
 }
@@ -53,4 +56,10 @@ Module.prototype.require = function require (...path) {
   } catch(e) {
     return _require.call(this, Path.literal.apply(Path, path))
   }
+}
+
+module.exports.add = (name, path) => {
+  let value = eval_literal(path)
+  namespace[name] = Path.resolve(value)
+  literals.push(escape(name))
 }

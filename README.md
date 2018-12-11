@@ -1,13 +1,17 @@
-Nodejs literal templating for node native require module.
+### Nodejs literal templating for node native require module.
 
 ### Usage
 
-`npm i literal-require --save`
+```
+npm i literal-require --save
+```
 
-`require('literal-require')`
+```js
+require('literal-require')
+```
 
 
-Add namespace to your application `package.json`
+### Add namespace to your application `package.json`
 
 ```json
 {
@@ -29,4 +33,4 @@ Add namespace to your application `package.json`
 
 ### require('path').literal('@application')
 
-Will resolve the path with pre-evaluated literal key/value.
+#### Will resolve the path with pre-evaluated literal key/value.
