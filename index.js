@@ -23,7 +23,7 @@ for (let name in namespace) {
 }
 
 const Module = require('module')
-const NAMESPACE_LOOKUP = new RegExp(`${literals.join('|')}`)
+let NAMESPACE_LOOKUP = new RegExp(`${literals.join('|')}`)
 
 if (Path.literal) {
   // NOTE: Some object might arise adding literal to `path` module..
@@ -62,4 +62,5 @@ module.exports.add = (name, path) => {
   let value = eval_literal(path)
   namespace[name] = Path.resolve(value)
   literals.push(escape(name))
+  NAMESPACE_LOOKUP = new RegExp(`${literals.join('|')}`)
 }
