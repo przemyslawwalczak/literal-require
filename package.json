@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/przemyslawwalczak/literal-require/issues"
   },
-  "homepage": "https://github.com/przemyslawwalczak/literal-require#readme"
+  "homepage": "https://github.com/przemyslawwalczak/literal-require#readme",
+  "dependencies": {
+    "escape-regex-string": "^1.0.6"
+  }
 }
