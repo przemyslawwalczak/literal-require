@@ -1,6 +1,6 @@
 {
   "name": "literal-require",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A literal templating for Node require",
   "main": "index.js",
   "scripts": {
